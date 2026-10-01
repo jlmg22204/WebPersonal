@@ -483,6 +483,8 @@ p { margin: 0 0 1rem; }
 .form textarea { resize: vertical; }
 .form input:focus, .form select:focus, .form textarea:focus { outline: none; border-color: var(--orange); box-shadow: 0 0 0 3px rgba(255, 138, 0, .15); }
 .form .is-invalid { border-color: #e5484d; }
+.form__trap { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.btn:disabled { opacity: .6; cursor: wait; }
 .form__status { margin: 12px 0 0; min-height: 1.3em; font-size: .88rem; text-align: center; color: var(--ink-600); }
 
 /* ---------- Footer ---------- */

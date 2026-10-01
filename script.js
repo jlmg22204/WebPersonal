@@ -52,10 +52,42 @@ const io = new IntersectionObserver(entries => {
 }, { threshold: 0.12 });
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-// Formulario de contacto (abre el cliente de correo con los datos)
+// Formulario de contacto: guarda la solicitud en Supabase
+// (la clave publicable es pública por diseño; la tabla solo permite insertar)
+const SUPABASE_URL = '';
+const SUPABASE_KEY = '';
+const CONTACT_EMAIL = 'contacto@marvicatta9.net'; // TODO: correo real
+
 const form = document.getElementById('contactForm');
 const status = document.getElementById('formStatus');
-form.addEventListener('submit', e => {
+const submitBtn = form.querySelector('button[type="submit"]');
+
+const sendByEmail = d => {
+  const body = `Nombre: ${d.nombre}\nEmpresa: ${d.empresa}\nCorreo: ${d.correo}\nTeléfono: ${d.telefono}\nProyecto: ${d.tipo}\n\n${d.mensaje}`;
+  window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent('Solicitud de asesoría: ' + d.tipo)}&body=${encodeURIComponent(body)}`;
+};
+
+const saveToSupabase = async d => {
+  const res = await fetch(`${SUPABASE_URL}/rest/v1/solicitudes_contacto`, {
+    method: 'POST',
+    headers: {
+      apikey: SUPABASE_KEY,
+      'Content-Type': 'application/json',
+      Prefer: 'return=minimal'
+    },
+    body: JSON.stringify({
+      nombre: d.nombre.trim(),
+      empresa: d.empresa.trim() || null,
+      correo: d.correo.trim(),
+      telefono: d.telefono.trim() || null,
+      tipo_proyecto: d.tipo,
+      mensaje: d.mensaje.trim()
+    })
+  });
+  if (!res.ok) throw new Error(`Supabase ${res.status}`);
+};
+
+form.addEventListener('submit', async e => {
   e.preventDefault();
   let ok = true;
   form.querySelectorAll('[required]').forEach(f => {
@@ -68,11 +100,28 @@ form.addEventListener('submit', e => {
     return;
   }
   const d = Object.fromEntries(new FormData(form));
-  const body = `Nombre: ${d.nombre}\nEmpresa: ${d.empresa}\nCorreo: ${d.correo}\nTeléfono: ${d.telefono}\nProyecto: ${d.tipo}\n\n${d.mensaje}`;
-  // TODO: reemplazar por el correo real o conectar a un servicio de formularios
-  window.location.href = `mailto:contacto@marvicatta9.net?subject=${encodeURIComponent('Solicitud de asesoría: ' + d.tipo)}&body=${encodeURIComponent(body)}`;
-  status.textContent = 'Gracias. Se abrirá su aplicación de correo para enviar la solicitud.';
-  form.reset();
+  if (d.sitio_web) return; // campo trampa: solo lo llenan los bots
+
+  if (!SUPABASE_URL || !SUPABASE_KEY) {
+    sendByEmail(d);
+    status.textContent = 'Gracias. Se abrirá su aplicación de correo para enviar la solicitud.';
+    form.reset();
+    return;
+  }
+
+  submitBtn.disabled = true;
+  status.textContent = 'Enviando solicitud…';
+  try {
+    await saveToSupabase(d);
+    status.textContent = '¡Gracias! Su solicitud fue recibida. Le responderé a la brevedad.';
+    form.reset();
+  } catch (err) {
+    console.error(err);
+    status.textContent = 'No se pudo enviar en este momento. Se abrirá su correo como alternativa.';
+    sendByEmail(d);
+  } finally {
+    submitBtn.disabled = false;
+  }
 });
 
 document.getElementById('year').textContent = new Date().getFullYear();
