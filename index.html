@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marvicatta9.net | Desarrollo de sistemas a medida con Inteligencia Artificial</title>
+  <meta name="description" content="Desarrollo de sistemas informáticos a medida con Inteligencia Artificial: software de gestión, automatización, asistentes virtuales, análisis predictivo, páginas web y aplicaciones móviles.">
+  <meta name="theme-color" content="#141c25">
+  <meta property="og:title" content="Marvicatta9.net | Sistemas a medida con IA">
+  <meta property="og:description" content="Software empresarial a medida potenciado con Inteligencia Artificial.">
+  <meta property="og:image" content="logo.jpeg">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Símbolo de la marca (cubo del logo) reutilizable -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="mark" viewBox="0 0 64 64">
+      <path d="M30 6 52 18 30 30 8 18Z" fill="#ff8a00"/>
+      <path d="M8 18 30 30v26L8 44Z" fill="#ff5a1f"/>
+      <path d="M30 30 52 18v26L30 56Z" fill="var(--mark-face,#1e2833)"/>
+      <path d="m38.5 33.5-3 3.5 3 3.5M45 33.5l3 3.5-3 3.5M43.2 32l-2.4 10" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="54" y="4" width="6" height="6" rx="1" fill="#ff8a00"/>
+      <rect x="47" y="2" width="4" height="4" rx=".8" fill="var(--mark-face,#1e2833)"/>
+      <rect x="57" y="13" width="4" height="4" rx=".8" fill="var(--mark-face,#1e2833)"/>
+    </symbol>
+  </svg>
+
+  <!-- ================= NAV ================= -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#inicio" class="brand" aria-label="Marvicatta9.net, ir al inicio">
+        <svg class="brand__mark"><use href="#mark"/></svg>
+        <span class="brand__text">MARVICATTA<span>9</span>.NET</span>
+      </a>
+      <nav class="nav__menu" id="navMenu" aria-label="Principal">
+        <a href="#servicios">Servicios</a>
+        <a href="#ia">Inteligencia Artificial</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#proceso">Metodología</a>
+        <a href="#faq">Preguntas</a>
+        <a href="#contacto" class="btn btn--primary btn--sm">Solicitar asesoría</a>
+      </nav>
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="inicio">
+    <div class="hero__grid" aria-hidden="true"></div>
+    <div class="container hero__inner">
+      <div class="hero__copy">
+        <span class="pill"><span class="pill__dot"></span>Desarrollo de software con Inteligencia Artificial</span>
+        <h1>Sistemas a medida que <em>trabajan de forma inteligente</em> para su empresa</h1>
+        <p class="hero__lead">Diseño y desarrollo software empresarial, aplicaciones web y móviles con capacidades de IA integradas: automatización de procesos, asistentes virtuales y análisis de datos adaptados a su operación.</p>
+        <div class="hero__cta">
+          <a href="#contacto" class="btn btn--primary">Agendar una asesoría gratuita
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11m-4-4 4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#servicios" class="btn btn--outline-light">Conocer servicios</a>
+        </div>
+        <ul class="hero__points">
+          <li>Código fuente de su propiedad</li>
+          <li>Entregas funcionales por etapas</li>
+          <li>Soporte posterior a la entrega</li>
+        </ul>
+      </div>
+
+      <!-- Mockup de sistema -->
+      <div class="hero__visual" aria-hidden="true">
+        <div class="app">
+          <div class="app__top">
+            <span class="app__dots"><i></i><i></i><i></i></span>
+            <span class="app__url">app.suempresa.com/panel</span>
+          </div>
+          <div class="app__body">
+            <aside class="app__side">
+              <svg class="app__logo"><use href="#mark"/></svg>
+              <i class="is-active"></i><i></i><i></i><i></i><i></i>
+            </aside>
+            <div class="app__main">
+              <div class="app__head">
+                <div><small>Panel general</small><b>Resumen de operaciones</b></div>
+                <span class="app__badge">IA activa</span>
+              </div>
+              <div class="app__kpis">
+                <div><small>Ventas del mes</small><b>$84.320</b><em class="up">+12,4%</em></div>
+                <div><small>Pedidos</small><b>1.248</b><em class="up">+8,1%</em></div>
+                <div><small>Tickets resueltos por IA</small><b>76%</b><em class="up">+5,3%</em></div>
+              </div>
+              <div class="app__chart">
+                <div class="app__chart-head"><small>Demanda real vs. proyección IA</small><span><i class="l1"></i>Real <i class="l2"></i>Proyección</span></div>
+                <svg viewBox="0 0 320 110" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0" stop-color="#ff8a00" stop-opacity=".28"/>
+                      <stop offset="1" stop-color="#ff8a00" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+                  <g stroke="#2c3846" stroke-width="1"><line x1="0" y1="27" x2="320" y2="27"/><line x1="0" y1="55" x2="320" y2="55"/><line x1="0" y1="83" x2="320" y2="83"/></g>
+                  <path d="M0 88 L35 80 L70 84 L105 66 L140 70 L175 52 L210 56 L210 110 L0 110Z" fill="url(#area)"/>
+                  <path d="M0 88 L35 80 L70 84 L105 66 L140 70 L175 52 L210 56" fill="none" stroke="#ff8a00" stroke-width="2.4" stroke-linejoin="round"/>
+                  <path d="M210 56 L245 42 L280 38 L320 22" fill="none" stroke="#ff8a00" stroke-width="2.4" stroke-dasharray="5 5" opacity=".7"/>
+                  <circle cx="210" cy="56" r="4" fill="#141c25" stroke="#ff8a00" stroke-width="2.4"/>
+                </svg>
+              </div>
+              <div class="app__ai">
+                <div class="app__ai-icon"><svg viewBox="0 0 20 20"><path d="M10 2.5l1.6 4.4 4.4 1.6-4.4 1.6L10 14.5l-1.6-4.4L4 8.5l4.4-1.6z" fill="currentColor"/></svg></div>
+                <p><b>Asistente IA:</b> se proyecta un aumento de demanda del 18% la próxima semana. ¿Desea generar la orden de compra sugerida?</p>
+                <span class="app__btn">Generar</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="stack">
+        <span class="stack__label">Tecnologías con las que trabajo</span>
+        <ul>
+          <li>Laravel</li><li>Python</li><li>Node.js</li><li>React</li><li>Vue</li><li>Flutter</li><li>MySQL</li><li>PostgreSQL</li><li>APIs de IA</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICIOS ================= -->
+  <section class="section" id="servicios">
+    <div class="container">
+      <div class="head head--split">
+        <div>
+          <span class="kicker">Servicios</span>
+          <h2>Soluciones tecnológicas completas, del análisis a la puesta en producción</h2>
+        </div>
+        <p>Cada proyecto combina ingeniería de software sólida con Inteligencia Artificial aplicada donde genera un retorno medible para el negocio.</p>
+      </div>
+
+      <div class="services">
+        <article class="service reveal">
+          <span class="service__num">01</span>
+          <div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4M8 10l-2 1.5L8 13M16 10l2 1.5-2 1.5M13 9l-2 5"/></svg></div>
+          <h3>Software de gestión a medida</h3>
+          <p>ERP, CRM, inventarios, facturación y control de procesos internos, diseñados según la forma en que opera su empresa.</p>
+          <ul><li>Módulos según sus necesidades</li><li>Roles, permisos y auditoría</li><li>Reportes y paneles en tiempo real</li></ul>
+        </article>
+
+        <article class="service service--highlight reveal">
+          <span class="service__num">02</span>
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg></div>
+          <h3>Integración de Inteligencia Artificial</h3>
+          <p>Incorporación de modelos de IA en sistemas nuevos o existentes: asistentes, clasificación, predicción y procesamiento de documentos.</p>
+          <ul><li>Modelos de lenguaje (LLM)</li><li>Machine learning con sus datos</li><li>Integración segura vía API</li></ul>
+        </article>
+
+        <article class="service reveal">
+          <span class="service__num">03</span>
+          <div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.8 3.2 2.8 14.8 0 18M12 3c-2.8 3.2-2.8 14.8 0 18"/></svg></div>
+          <h3>Páginas y aplicaciones web</h3>
+          <p>Sitios corporativos, comercio electrónico y portales de clientes rápidos, seguros y optimizados para buscadores.</p>
+          <ul><li>Diseño adaptable a todo dispositivo</li><li>Optimización SEO y rendimiento</li><li>Panel de administración propio</li></ul>
+        </article>
+
+        <article class="service reveal">
+          <span class="service__num">04</span>
+          <div class="icon"><svg viewBox="0 0 24 24"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg></div>
+          <h3>Aplicaciones móviles</h3>
+          <p>Apps para Android e iOS conectadas a su sistema central, con notificaciones, trabajo sin conexión y funciones de IA.</p>
+          <ul><li>Android e iOS</li><li>Sincronización con su plataforma</li><li>Publicación en tiendas</li></ul>
+        </article>
+
+        <article class="service reveal">
+          <span class="service__num">05</span>
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 6h10M4 12h6M4 18h10"/><path d="M17 9l3 3-3 3"/><path d="M13 12h7"/></svg></div>
+          <h3>Automatización de procesos</h3>
+          <p>Flujos que eliminan tareas repetitivas: generación de documentos, notificaciones, conciliaciones e integración entre plataformas.</p>
+          <ul><li>Integración entre herramientas</li><li>Tareas programadas y bots</li><li>Alertas automáticas</li></ul>
+        </article>
+
+        <article class="service reveal">
+          <span class="service__num">06</span>
+          <div class="icon"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5.5" rx="7.5" ry="2.8"/><path d="M4.5 5.5v6.5c0 1.6 3.4 2.8 7.5 2.8s7.5-1.2 7.5-2.8V5.5M4.5 12v6.5c0 1.6 3.4 2.8 7.5 2.8s7.5-1.2 7.5-2.8V12"/></svg></div>
+          <h3>Datos, APIs y migraciones</h3>
+          <p>Bases de datos bien estructuradas, APIs documentadas y migración segura desde hojas de cálculo o sistemas heredados.</p>
+          <ul><li>MySQL, PostgreSQL, SQL Server</li><li>APIs REST documentadas</li><li>Respaldos y seguridad</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= IA APLICADA ================= -->
+  <section class="section section--tint" id="ia">
+    <div class="container">
+      <div class="head">
+        <span class="kicker">Inteligencia Artificial aplicada</span>
+        <h2>Capacidades de IA integradas en su sistema</h2>
+        <p>La Inteligencia Artificial se implementa en funciones concretas del negocio, con objetivos claros y resultados medibles.</p>
+      </div>
+
+      <div class="ai">
+        <div class="ai__list" role="tablist" aria-label="Capacidades de IA">
+          <button class="ai__tab is-active" role="tab" aria-selected="true" data-tab="0">
+            <b>Asistentes virtuales</b><span>Atención automatizada 24/7</span>
+          </button>
+          <button class="ai__tab" role="tab" aria-selected="false" data-tab="1">
+            <b>Análisis predictivo</b><span>Anticipe demanda y riesgos</span>
+          </button>
+          <button class="ai__tab" role="tab" aria-selected="false" data-tab="2">
+            <b>Procesamiento de documentos</b><span>Extracción automática de datos</span>
+          </button>
+          <button class="ai__tab" role="tab" aria-selected="false" data-tab="3">
+            <b>Consultas en lenguaje natural</b><span>Pregunte a sus datos</span>
+          </button>
+          <button class="ai__tab" role="tab" aria-selected="false" data-tab="4">
+            <b>Reportes inteligentes</b><span>Indicadores que se explican solos</span>
+          </button>
+        </div>
+
+        <div class="ai__panels">
+          <div class="ai__panel is-active" role="tabpanel">
+            <div class="ai__text">
+              <h3>Asistentes virtuales y chatbots</h3>
+              <p>Un asistente entrenado con la información de su empresa que atiende clientes por web o WhatsApp, agenda citas, registra pedidos y consulta su sistema en tiempo real.</p>
+              <ul class="checks"><li>Atención continua sin aumentar personal</li><li>Respuestas basadas en sus documentos y catálogo</li><li>Derivación a un asesor cuando es necesario</li></ul>
+            </div>
+            <div class="demo demo--chat" aria-hidden="true">
+              <div class="demo__bar"><svg><use href="#mark"/></svg><b>Asistente virtual</b><span>En línea</span></div>
+              <div class="msg msg--user">¿Tienen disponible el producto A-120?</div>
+              <div class="msg msg--bot">Sí, hay 34 unidades en bodega central. ¿Desea reservar 2 unidades para retiro mañana?</div>
+              <div class="msg msg--user">Sí, por favor.</div>
+              <div class="msg msg--bot">Reserva #4821 confirmada. Le envié el detalle a su correo.</div>
+            </div>
+          </div>
+
+          <div class="ai__panel" role="tabpanel">
+            <div class="ai__text">
+              <h3>Análisis predictivo</h3>
+              <p>Modelos de machine learning que aprenden del historial de su negocio para anticipar la demanda, detectar clientes en riesgo de abandono o identificar operaciones inusuales.</p>
+              <ul class="checks"><li>Pronóstico de ventas e inventario</li><li>Detección de anomalías y fraude</li><li>Segmentación de clientes</li></ul>
+            </div>
+            <div class="demo demo--bars" aria-hidden="true">
+              <div class="demo__bar"><b>Pronóstico de demanda</b><span>Próximas 2 semanas</span></div>
+              <div class="bars">
+                <span style="--h:42%"></span><span style="--h:56%"></span><span style="--h:48%"></span><span style="--h:64%"></span>
+                <span style="--h:70%"></span><span class="pred" style="--h:82%"></span><span class="pred" style="--h:90%"></span>
+              </div>
+              <div class="bars__legend"><span><i></i>Histórico</span><span><i class="pred"></i>Proyección IA</span></div>
+            </div>
+          </div>
+
+          <div class="ai__panel" role="tabpanel">
+            <div class="ai__text">
+              <h3>Procesamiento de documentos</h3>
+              <p>La IA lee facturas, contratos, formularios o fotografías y extrae los datos relevantes para registrarlos en su sistema sin digitación manual.</p>
+              <ul class="checks"><li>Lectura inteligente de facturas y comprobantes</li><li>Clasificación automática de documentos</li><li>Resúmenes de contratos y expedientes</li></ul>
+            </div>
+            <div class="demo demo--doc" aria-hidden="true">
+              <div class="demo__bar"><b>Factura_0932.pdf</b><span>Procesada</span></div>
+              <div class="doc-flow">
+                <div class="doc"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                <svg class="doc-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <dl class="fields">
+                  <div><dt>Proveedor</dt><dd>Comercial Andes S.A.</dd></div>
+                  <div><dt>Fecha</dt><dd>12/09/2026</dd></div>
+                  <div><dt>Total</dt><dd>$1.248,50</dd></div>
+                </dl>
+              </div>
+            </div>
+          </div>
+
+          <div class="ai__panel" role="tabpanel">
+            <div class="ai__text">
+              <h3>Consultas en lenguaje natural</h3>
+              <p>Consulte su sistema como lo haría con un colaborador: “¿cuáles fueron los cinco clientes con mayores compras en agosto?” y obtenga la respuesta al instante.</p>
+              <ul class="checks"><li>Preguntas en lenguaje natural sobre su base de datos</li><li>Búsqueda semántica en manuales y documentos</li><li>Base de conocimiento interna para su equipo</li></ul>
+            </div>
+            <div class="demo demo--search" aria-hidden="true">
+              <div class="search">
+                <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                Clientes con mayores compras en agosto
+              </div>
+              <table>
+                <tr><td>1. Comercial Andes</td><td>$12.400</td></tr>
+                <tr><td>2. Distribuidora Sol</td><td>$9.870</td></tr>
+                <tr><td>3. Ferretería Norte</td><td>$8.215</td></tr>
+                <tr><td>4. Grupo Litoral</td><td>$7.960</td></tr>
+              </table>
+            </div>
+          </div>
+
+          <div class="ai__panel" role="tabpanel">
+            <div class="ai__text">
+              <h3>Reportes inteligentes</h3>
+              <p>Informes que se generan automáticamente: la IA resume los indicadores clave, destaca lo relevante y notifica cuando algo requiere atención.</p>
+              <ul class="checks"><li>Resúmenes ejecutivos diarios o semanales</li><li>Alertas por correo, WhatsApp o Telegram</li><li>Paneles con indicadores en tiempo real</li></ul>
+            </div>
+            <div class="demo demo--report" aria-hidden="true">
+              <div class="demo__bar"><b>Resumen semanal</b><span>Generado por IA</span></div>
+              <div class="kpis">
+                <div><small>Ventas</small><b>$48.200</b><em class="up">+12%</em></div>
+                <div><small>Stock crítico</small><b>7 ítems</b><em class="warn">Revisar</em></div>
+              </div>
+              <p class="insight">Las ventas crecieron por la línea de accesorios. Se recomienda reponer 3 productos antes del viernes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SOBRE MÍ ================= -->
+  <section class="section" id="sobre-mi">
+    <div class="container">
+      <div class="about">
+        <div class="about__media reveal">
+          <div class="about__photo">
+            <img src="foto.jpg" alt="José Luis Martínez Galindo" onerror="this.remove()">
+            <div class="about__placeholder" aria-hidden="true">
+              <svg><use href="#mark"/></svg>
+            </div>
+          </div>
+          <div class="about__card">
+            <svg><use href="#mark"/></svg>
+            <div><b>Disponible para nuevos proyectos</b><span>Perú · Atención remota y presencial</span></div>
+          </div>
+        </div>
+
+        <div class="about__copy reveal">
+          <span class="kicker">Sobre mí</span>
+          <h2>Tecnología con experiencia real en el negocio</h2>
+          <p class="about__name"><b>José Luis Martínez Galindo</b> · Desarrollador de sistemas y fundador de Marvicatta9.net</p>
+          <p>Cuento con más de 15 años de experiencia en tecnologías de la información y en el sector financiero cooperativo. Durante más de una década estuve a cargo del centro de cómputo de la <b>COOPAC Sider y SPS</b>, donde administré la infraestructura informática, brindé soporte al sistema financiero SFI sobre base de datos Oracle y, como <b>Jefe de Riesgos</b>, gestioné las políticas de evaluación crediticia y los manuales de riesgo de crédito, operacional y de liquidez.</p>
+          <p>Desde 2023 desarrollo de forma independiente <b>sistemas informáticos a la medida para pequeños negocios</b> y, desde 2024, me desempeño como <b>Consultor de Riesgos en INSACO</b>. Esa combinación de tecnología y conocimiento del negocio es la base de Marvicatta9.net: sistemas que entienden los procesos reales de cada organización y aprovechan la Inteligencia Artificial para hacerlos más eficientes.</p>
+
+          <ul class="about__stats">
+            <li><b>15+</b><span>Años en tecnologías de la información</span></li>
+            <li><b>3+</b><span>Años desarrollando sistemas para negocios</span></li>
+            <li><b>30</b><span>Capacitaciones y diplomados especializados</span></li>
+          </ul>
+
+          <div class="about__actions">
+            <a href="#contacto" class="btn btn--primary">Trabajemos juntos
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11m-4-4 4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cv">
+        <div class="cv__block reveal">
+          <h3 class="cv__title">Trayectoria profesional</h3>
+          <ol class="cv__list">
+            <li>
+              <span class="cv__date">2024 — Actualidad</span>
+              <b>Consultor de Riesgos</b>
+              <small>INSACO · Innovación y Consultoría</small>
+              <p>Consultoría en gestión de riesgos para entidades del sector financiero cooperativo.</p>
+            </li>
+            <li>
+              <span class="cv__date">2023 — Actualidad</span>
+              <b>Desarrollador de sistemas independiente</b>
+              <small>Proyectos propios · Pequeños negocios</small>
+              <p>Análisis, diseño y desarrollo de sistemas informáticos a la medida para pequeños negocios.</p>
+            </li>
+            <li>
+              <span class="cv__date">2023</span>
+              <b>Analista Administrativo</b>
+              <small>Cooperativa del BCRP</small>
+              <p>Análisis y gestión de procesos administrativos de la cooperativa.</p>
+            </li>
+            <li>
+              <span class="cv__date">2021 — 2023</span>
+              <b>Técnico en Telecomunicaciones</b>
+              <small>Inversiones Sertech</small>
+              <p>Mantenimiento preventivo y correctivo de equipos satelitales y sistemas de videovigilancia en embarcaciones pesqueras de la empresa Hayduk.</p>
+            </li>
+            <li>
+              <span class="cv__date">2013 — 2021</span>
+              <b>Jefe de Riesgos</b>
+              <small>COOPAC Sider y SPS</small>
+              <p>Gestión de políticas y procesos de aprobación de créditos; elaboración y control de manuales de riesgo crediticio, operacional y de liquidez.</p>
+            </li>
+            <li>
+              <span class="cv__date">2009 — 2021</span>
+              <b>Encargado del Centro de Cómputo</b>
+              <small>COOPAC Sider y SPS</small>
+              <p>Administración de equipos y videovigilancia de todas las agencias, soporte del sistema SFI (Oracle), apoyo a Contabilidad en estados financieros para la SBS, cartera de créditos, control de morosidad e indicadores gerenciales.</p>
+            </li>
+            <li>
+              <span class="cv__date">2008 — 2009</span>
+              <b>Controlador de operaciones</b>
+              <small>Hotel Casino San Felipe</small>
+              <p>Control y registro de contadores de máquinas en los locales de Chimbote y Nuevo Chimbote.</p>
+            </li>
+          </ol>
+        </div>
+
+        <div class="cv__side">
+          <div class="cv__block reveal">
+            <h3 class="cv__title">Formación</h3>
+            <ul class="cv__edu">
+              <li><b>Ingeniería de Sistemas e Informática</b><small>Universidad César Vallejo · Estudios hasta el 7.º ciclo</small></li>
+              <li><b>Diplomado en Alta Dirección y Gerencia</b><small>ACUPEC · 2011</small></li>
+              <li><b>Diplomados en Créditos, Cobranzas y Recuperación de Créditos</b><small>ACUPEC · 2011</small></li>
+              <li><b>Programa de Gestión del Riesgo para Cooperativas</b><small>IFB Certus · 2015</small></li>
+              <li><b>Seminarios y talleres especializados</b><small>SBS, FENACREP, Universidad ESAN, INSACO, Axess Networks (2011 — 2021)</small></li>
+            </ul>
+          </div>
+
+          <div class="cv__block reveal">
+            <h3 class="cv__title">Competencias</h3>
+            <div class="about__skills">
+              <span>PHP</span><span>C#</span><span>MySQL</span><span>Oracle</span><span>SQL Server</span>
+              <span>Desarrollo web</span><span>Bases de datos</span><span>Soporte e infraestructura TI</span>
+              <span>Gestión de riesgos financieros</span><span>Análisis de cartera</span><span>Indicadores gerenciales</span>
+              <span>Telecomunicaciones satelitales</span><span>MS Excel</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= METODOLOGÍA ================= -->
+  <section class="section" id="proceso">
+    <div class="container">
+      <div class="head">
+        <span class="kicker">Metodología</span>
+        <h2>Un proceso de trabajo claro y transparente</h2>
+        <p>Usted conoce en todo momento el estado de su proyecto, los entregables y los próximos pasos.</p>
+      </div>
+      <ol class="timeline">
+        <li class="reveal"><span class="timeline__n">1</span><h3>Diagnóstico</h3><p>Análisis de su negocio, procesos actuales y oportunidades de aplicar IA.</p></li>
+        <li class="reveal"><span class="timeline__n">2</span><h3>Propuesta</h3><p>Alcance, arquitectura, cronograma y cotización detallada.</p></li>
+        <li class="reveal"><span class="timeline__n">3</span><h3>Diseño</h3><p>Prototipos de pantallas y flujos validados con usted.</p></li>
+        <li class="reveal"><span class="timeline__n">4</span><h3>Desarrollo</h3><p>Construcción por etapas con entregas funcionales periódicas.</p></li>
+        <li class="reveal"><span class="timeline__n">5</span><h3>Implementación</h3><p>Puesta en producción, migración de datos y capacitación.</p></li>
+        <li class="reveal"><span class="timeline__n">6</span><h3>Soporte</h3><p>Mantenimiento, respaldos y mejora continua.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ================= VALOR ================= -->
+  <section class="section section--dark">
+    <div class="container">
+      <div class="head head--split head--light">
+        <div>
+          <span class="kicker">Por qué un sistema a medida</span>
+          <h2>Tecnología que se adapta a su empresa, no al revés</h2>
+        </div>
+        <p>A diferencia del software genérico, un sistema a medida refleja sus procesos reales, crece con su negocio y le pertenece.</p>
+      </div>
+      <div class="values">
+        <div class="value reveal">
+          <div class="icon icon--dark"><svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></div>
+          <h3>Propiedad total</h3><p>El código fuente y los datos son suyos. Sin licencias mensuales por usuario.</p>
+        </div>
+        <div class="value reveal">
+          <div class="icon icon--dark"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
+          <h3>Escalabilidad</h3><p>Comience con lo esencial y agregue módulos o funciones de IA cuando lo necesite.</p>
+        </div>
+        <div class="value reveal">
+          <div class="icon icon--dark"><svg viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <h3>Seguridad</h3><p>Cifrado, control de accesos, respaldos automáticos y buenas prácticas de desarrollo.</p>
+        </div>
+        <div class="value reveal">
+          <div class="icon icon--dark"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.8 7L4 20l1.1-4.6A8 8 0 1 1 21 12z"/></svg></div>
+          <h3>Comunicación directa</h3><p>Trato directo con quien desarrolla su sistema, sin intermediarios.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SECTORES ================= -->
+  <section class="section" id="sectores">
+    <div class="container">
+      <div class="head">
+        <span class="kicker">Sectores</span>
+        <h2>Soluciones para distintas industrias</h2>
+      </div>
+      <div class="sectors">
+        <div class="sector reveal"><h3>Comercio y retail</h3><p>Inventario predictivo, comercio electrónico y asistente de ventas.</p></div>
+        <div class="sector reveal"><h3>Finanzas y contabilidad</h3><p>Lectura de facturas, conciliaciones y reportes financieros.</p></div>
+        <div class="sector reveal"><h3>Salud</h3><p>Agendamiento, historias clínicas y recordatorios automáticos.</p></div>
+        <div class="sector reveal"><h3>Educación</h3><p>Plataformas académicas, calificaciones y asistentes de estudio.</p></div>
+        <div class="sector reveal"><h3>Logística y transporte</h3><p>Seguimiento de pedidos, rutas y control de flota.</p></div>
+        <div class="sector reveal"><h3>Servicios profesionales</h3><p>CRM, cotizaciones automáticas y gestión documental.</p></div>
+        <div class="sector reveal"><h3>Manufactura</h3><p>Control de producción, calidad y mantenimiento preventivo.</p></div>
+        <div class="sector reveal"><h3>Sector público</h3><p>Trámites en línea, estadísticas y atención ciudadana.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section class="section section--tint" id="faq">
+    <div class="container faq-wrap">
+      <div class="faq-wrap__head">
+        <span class="kicker">Preguntas frecuentes</span>
+        <h2>Información útil antes de comenzar</h2>
+        <p>¿No encuentra su pregunta? Escríbame y le responderé personalmente.</p>
+        <a href="#contacto" class="btn btn--dark">Hacer una consulta</a>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>¿Cuál es el costo de un sistema a medida con IA?</summary>
+          <p>Depende del alcance: cantidad de módulos, integraciones y funciones de IA. Luego de la reunión de diagnóstico recibirá una cotización detallada y sin compromiso. Es posible iniciar con una versión base e incorporar funcionalidades progresivamente.</p>
+        </details>
+        <details>
+          <summary>¿Cuánto tiempo toma el desarrollo?</summary>
+          <p>Un sitio web corporativo puede estar listo en 2 a 4 semanas. Un sistema de gestión con IA suele requerir entre 1 y 4 meses según su complejidad. Las entregas son parciales, por lo que verá avances desde las primeras semanas.</p>
+        </details>
+        <details>
+          <summary>¿Es posible agregar IA a un sistema existente?</summary>
+          <p>Sí. Se analiza su sistema actual y se integran funciones de IA mediante APIs, sin necesidad de reconstruirlo desde cero.</p>
+        </details>
+        <details>
+          <summary>¿Cómo se protege la información al usar Inteligencia Artificial?</summary>
+          <p>La seguridad se considera desde el diseño: control de accesos, cifrado y uso de proveedores de IA con políticas empresariales de privacidad. A los modelos solo se envía la información estrictamente necesaria.</p>
+        </details>
+        <details>
+          <summary>¿Qué soporte ofrece después de la entrega?</summary>
+          <p>Todo proyecto incluye un periodo de garantía. Además, hay planes de mantenimiento con respaldos, actualizaciones de seguridad y mejoras continuas.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACTO ================= -->
+  <section class="section contact-section" id="contacto">
+    <div class="container">
+      <div class="contact">
+        <div class="contact__info">
+          <span class="kicker">Contacto</span>
+          <h2>Conversemos sobre su próximo proyecto</h2>
+          <p>Cuénteme qué necesita y le enviaré una propuesta inicial. La primera asesoría no tiene costo.</p>
+          <!-- TODO: reemplazar con datos reales -->
+          <ul class="contact__list">
+            <li>
+              <div class="icon icon--dark"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div>
+              <div><small>Correo electrónico</small><a href="mailto:contacto@marvicatta9.net">contacto@marvicatta9.net</a></div>
+            </li>
+            <li>
+              <div class="icon icon--dark"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></div>
+              <div><small>WhatsApp</small><a href="https://wa.me/000000000000" target="_blank" rel="noopener">+000 000 000 000</a></div>
+            </li>
+            <li>
+              <div class="icon icon--dark"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></div>
+              <div><small>Modalidad</small><span>Atención remota y presencial</span></div>
+            </li>
+          </ul>
+        </div>
+
+        <form class="form" id="contactForm" novalidate>
+          <h3>Solicitar asesoría</h3>
+          <div class="form__row">
+            <label>Nombre completo<input type="text" name="nombre" required autocomplete="name"></label>
+            <label>Empresa<input type="text" name="empresa" autocomplete="organization"></label>
+          </div>
+          <div class="form__row">
+            <label>Correo electrónico<input type="email" name="correo" required autocomplete="email"></label>
+            <label>Teléfono<input type="tel" name="telefono" autocomplete="tel"></label>
+          </div>
+          <label>Tipo de proyecto
+            <select name="tipo">
+              <option>Sistema a medida con IA</option>
+              <option>Integrar IA a un sistema existente</option>
+              <option>Página o aplicación web</option>
+              <option>Aplicación móvil</option>
+              <option>Automatización de procesos</option>
+              <option>Otro</option>
+            </select>
+          </label>
+          <label>Descripción del proyecto<textarea name="mensaje" rows="4" required placeholder="Describa brevemente el problema que desea resolver"></textarea></label>
+          <button type="submit" class="btn btn--primary btn--block">Enviar solicitud</button>
+          <p class="form__status" id="formStatus" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="#inicio" class="brand brand--light">
+            <svg class="brand__mark"><use href="#mark"/></svg>
+            <span class="brand__text">MARVICATTA<span>9</span>.NET</span>
+          </a>
+          <p>Desarrollo web y aplicaciones. Soluciones a la medida con Inteligencia Artificial.</p>
+        </div>
+        <div>
+          <h4>Servicios</h4>
+          <ul><li><a href="#servicios">Software de gestión</a></li><li><a href="#ia">Integración de IA</a></li><li><a href="#servicios">Páginas web</a></li><li><a href="#servicios">Apps móviles</a></li></ul>
+        </div>
+        <div>
+          <h4>Información</h4>
+          <ul><li><a href="#sobre-mi">Sobre mí</a></li><li><a href="#proceso">Metodología</a></li><li><a href="#sectores">Sectores</a></li><li><a href="#faq">Preguntas frecuentes</a></li><li><a href="#contacto">Contacto</a></li></ul>
+        </div>
+        <div>
+          <h4>Contacto</h4>
+          <ul><li><a href="mailto:contacto@marvicatta9.net">contacto@marvicatta9.net</a></li><li><a href="https://wa.me/000000000000" target="_blank" rel="noopener">WhatsApp</a></li></ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© <span id="year"></span> Marvicatta9.net. Todos los derechos reservados.</p>
+        <a href="#inicio">Volver arriba ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/000000000000" class="wa-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.2z"/></svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
