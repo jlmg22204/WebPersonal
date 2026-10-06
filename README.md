@@ -1,6 +1,6 @@
 # Marvicatta9.net
 
-Web personal de **José Luis Martínez Galindo**: desarrollo de sistemas informáticos a la medida con Inteligencia Artificial.
+Web personal de **José Luis Martínez Galindo**: desarrollo de sistemas informáticos, páginas web y aplicaciones a la medida.
 
 ## Estructura
 

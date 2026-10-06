@@ -27,9 +27,28 @@ links.forEach(l => {
   if (s) sectionObserver.observe(s);
 });
 
-// Pestañas de IA
-const tabs = document.querySelectorAll('.ai__tab');
-const panels = document.querySelectorAll('.ai__panel');
+// Recomendaciones de clientes.
+// Agregue solo testimonios reales y con autorización del cliente; la sección
+// aparece automáticamente cuando esta lista tiene al menos uno. Ejemplo:
+// { texto: 'Comentario del cliente…', nombre: 'Nombre del cliente', cargo: 'Gerente', empresa: 'Nombre del negocio' },
+const TESTIMONIOS = [];
+
+if (TESTIMONIOS.length) {
+  const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  document.getElementById('testimonials').innerHTML = TESTIMONIOS.map(t => `
+    <figure class="testimonial reveal is-visible">
+      <blockquote>“${esc(t.texto)}”</blockquote>
+      <footer>
+        <span class="testimonial__avatar">${esc(t.nombre.charAt(0))}</span>
+        <div><b>${esc(t.nombre)}</b><small>${esc([t.cargo, t.empresa].filter(Boolean).join(' · '))}</small></div>
+      </footer>
+    </figure>`).join('');
+  document.getElementById('recomendaciones').hidden = false;
+}
+
+// Pestañas de soluciones
+const tabs = document.querySelectorAll('.sol__tab');
+const panels = document.querySelectorAll('.sol__panel');
 tabs.forEach(tab =>
   tab.addEventListener('click', () => {
     const i = Number(tab.dataset.tab);
