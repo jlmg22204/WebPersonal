@@ -9,7 +9,7 @@ Web personal de **José Luis Martínez Galindo**: desarrollo de sistemas inform�
 | `index.html` | Estructura y contenido de la página |
 | `styles.css` | Estilos (paleta basada en el logo) |
 | `script.js` | Menú móvil, pestañas, animaciones y formulario |
-| `logo.jpeg`, `favicon.svg`, `foto.jpg` | Recursos gráficos |
+| `logo.jpeg`, `favicon.svg` | Recursos gráficos |
 
 ## Ver en local
 

@@ -160,8 +160,21 @@ p { margin: 0 0 1rem; }
   border-radius: 26px; background: var(--grad);
 }
 .profile { position: relative; background: var(--white); border-radius: 24px; padding: 12px; box-shadow: var(--shadow-lg); }
-.profile__photo { aspect-ratio: 4 / 4.6; border-radius: 16px; overflow: hidden; background: var(--ink-100); }
-.profile__photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
+.profile__brand {
+  aspect-ratio: 4 / 4.2; border-radius: 16px; overflow: hidden;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px;
+  padding: 24px; text-align: center;
+  background:
+    radial-gradient(circle at 50% 38%, rgba(255, 138, 0, .25), transparent 60%),
+    linear-gradient(rgba(255, 255, 255, .04) 1px, transparent 1px) 0 0 / 32px 32px,
+    linear-gradient(90deg, rgba(255, 255, 255, .04) 1px, transparent 1px) 0 0 / 32px 32px,
+    var(--ink-900);
+  --mark-face: #3a4757;
+}
+.profile__mark { width: 46%; height: auto; aspect-ratio: 1; filter: drop-shadow(0 18px 30px rgba(0, 0, 0, .45)); }
+.profile__wordmark { font: 800 1.35rem/1 var(--font-head); color: var(--white); letter-spacing: .01em; }
+.profile__wordmark span { color: var(--orange); }
+.profile__tagline { font-size: .74rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-300); }
 .profile__info { padding: 16px 10px 8px; }
 .profile__info b { display: block; font: 700 1.05rem var(--font-head); color: var(--ink-900); }
 .profile__info span { font-size: .86rem; color: var(--ink-500); }
