@@ -75,7 +75,7 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 // (la clave publicable es pública por diseño; la tabla solo permite insertar)
 const SUPABASE_URL = 'https://atbjyuovneeulrdzpqln.supabase.co';
 const SUPABASE_KEY = 'sb_publishable_1gCvT3G8yBdB9nDuZCDa3g_ccEUux5C';
-const CONTACT_EMAIL = 'contacto@marvicatta9.net'; // TODO: correo real
+const CONTACT_EMAIL = 'jlmartinezg2204@gmail.com';
 
 const form = document.getElementById('contactForm');
 const status = document.getElementById('formStatus');
