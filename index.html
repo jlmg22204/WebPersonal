@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=6">
+  <link rel="stylesheet" href="styles.css?v=7">
 </head>
 <body>
 
@@ -39,7 +39,7 @@
       </a>
       <nav class="nav__menu" id="navMenu" aria-label="Principal">
         <a href="#servicios">Servicios</a>
-        <a href="#soluciones">Soluciones</a>
+        <a href="#portafolio">Portafolio</a>
         <a href="#experiencia">Experiencia</a>
         <a href="#confianza">Garantías</a>
         <a href="#faq">Preguntas</a>
@@ -253,6 +253,160 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ================= PORTAFOLIO ================= -->
+  <section class="section" id="portafolio">
+    <div class="container">
+      <div class="head head--split">
+        <div>
+          <span class="kicker">Portafolio</span>
+          <h2>Proyectos desarrollados</h2>
+        </div>
+        <p>Sistemas reales construidos para organizaciones, cooperativas y negocios. Las imágenes son ilustrativas para proteger la información de cada cliente.</p>
+      </div>
+
+      <div class="filters" role="group" aria-label="Filtrar proyectos">
+        <button class="filter is-active" data-filter="todos" aria-pressed="true">Todos</button>
+        <button class="filter" data-filter="gestion" aria-pressed="false">Gestión</button>
+        <button class="filter" data-filter="financiero" aria-pressed="false">Sector financiero</button>
+        <button class="filter" data-filter="movil" aria-pressed="false">Apps móviles</button>
+        <button class="filter" data-filter="web" aria-pressed="false">Web</button>
+      </div>
+
+      <div class="works">
+        <article class="work" data-cat="gestion web">
+          <div class="work__art" aria-hidden="true">
+            <div class="art-app">
+              <div class="art-win"><i></i><i></i><i></i></div>
+              <div class="art-kpis"><span></span><span></span><span></span></div>
+              <div class="art-rows"><span></span><span></span><span></span><span></span></div>
+            </div>
+          </div>
+          <div class="work__body">
+            <span class="work__client">A.H. La Esperanza de Luis Gamarra</span>
+            <h3>Sistema de gestión comunal</h3>
+            <p>Plataforma web para administrar el asentamiento humano: padrón de vecinos, directiva, eventos, asistencia y finanzas comunales.</p>
+            <ul class="work__list"><li>Cuotas, multas, ingresos y egresos</li><li>Lecturas de medidor y recibos de luz</li><li>Portal del vecino con comunicados y galería</li></ul>
+            <div class="work__tech"><span>Laravel</span><span>MySQL</span><span>Blade</span></div>
+          </div>
+        </article>
+
+        <article class="work" data-cat="movil gestion">
+          <div class="work__art" aria-hidden="true">
+            <div class="art-phone"><b></b><span class="ok"></span><span class="ok"></span><span></span><span class="ok"></span><em></em></div>
+          </div>
+          <div class="work__body">
+            <span class="work__client">A.H. La Esperanza de Luis Gamarra</span>
+            <h3>App de control de asistencia</h3>
+            <p>Aplicación Android e iOS para que la directiva registre la asistencia a eventos y asambleas, incluso en lugares sin señal.</p>
+            <ul class="work__list"><li>Funciona sin internet y sincroniza después</li><li>Reportes PDF y Excel desde el celular</li><li>Conectada al sistema web mediante API</li></ul>
+            <div class="work__tech"><span>React Native</span><span>Expo</span><span>API Laravel</span></div>
+          </div>
+        </article>
+
+        <article class="work" data-cat="movil web">
+          <div class="work__art work__art--map" aria-hidden="true">
+            <svg viewBox="0 0 200 110" preserveAspectRatio="xMidYMid slice"><path d="M0 70 C40 60 60 85 100 72 S160 40 200 52" stroke="#36424f" stroke-width="10" fill="none"/><path d="M30 0 L60 110 M140 0 L120 110" stroke="#2c3846" stroke-width="7"/><path d="M42 88 C70 70 110 78 150 46" stroke="#ff8a00" stroke-width="3" fill="none" stroke-dasharray="6 5"/><circle cx="42" cy="88" r="6" fill="#ff8a00"/><circle cx="150" cy="46" r="7" fill="#fff"/><circle cx="150" cy="46" r="3" fill="#ff5a1f"/></svg>
+          </div>
+          <div class="work__body">
+            <span class="work__client">Tu Taxi</span>
+            <h3>Plataforma de servicio de taxi</h3>
+            <p>Sistema con aplicaciones para el pasajero, el conductor y la central de despacho, instalable en el celular.</p>
+            <ul class="work__list"><li>Pedido de taxi y seguimiento de viajes</li><li>Panel de central y gestión de conductores</li><li>Tarifas interprovinciales, reclamos y alertas</li></ul>
+            <div class="work__tech"><span>App web (PWA)</span><span>Android</span><span>Supabase</span></div>
+          </div>
+        </article>
+
+        <article class="work" data-cat="financiero">
+          <div class="work__art" aria-hidden="true">
+            <div class="art-heat"><i class="l1"></i><i class="l2"></i><i class="l3"></i><i class="l4"></i><i class="l2"></i><i class="l3"></i><i class="l4"></i><i class="l5"></i><i class="l3"></i><i class="l4"></i><i class="l5"></i><i class="l5"></i><i class="l1"></i><i class="l1"></i><i class="l2"></i><i class="l3"></i></div>
+          </div>
+          <div class="work__body">
+            <span class="work__client">Bancos y cooperativas</span>
+            <h3>Sistema de Gestión Integral de Riesgos</h3>
+            <p>Registro, evaluación y monitoreo de riesgos según la normativa SBS: operacional, crédito, liquidez, mercado, tecnología, proyectos y cumplimiento.</p>
+            <ul class="work__list"><li>Matrices de riesgo y evaluación de controles</li><li>Indicadores clave (KRI), incidentes y eventos de pérdida</li><li>Reportes regulatorios</li></ul>
+            <div class="work__tech"><span>Laravel</span><span>MySQL</span><span>Normativa SBS</span></div>
+          </div>
+        </article>
+
+        <article class="work" data-cat="financiero gestion">
+          <div class="work__art" aria-hidden="true">
+            <div class="art-app">
+              <div class="art-win"><i></i><i></i><i></i></div>
+              <div class="art-split"><div class="art-side"><span></span><span></span><span></span><span></span></div><div class="art-chart"><span style="--h:40%"></span><span style="--h:60%"></span><span style="--h:52%"></span><span style="--h:78%"></span><span style="--h:70%"></span></div></div>
+            </div>
+          </div>
+          <div class="work__body">
+            <span class="work__client">Cooperativas de ahorro y crédito</span>
+            <h3>Sistema integrado COOPAC</h3>
+            <p>Sistema central para cooperativas: socios, ahorros, depósitos a plazo, créditos, caja, bóveda y contabilidad en una sola plataforma.</p>
+            <ul class="work__list"><li>Admisión y gestión de socios</li><li>Créditos con cronogramas y cobranza</li><li>Caja, bóveda y asientos contables</li></ul>
+            <div class="work__tech"><span>Laravel</span><span>Bootstrap</span><span>MySQL</span></div>
+          </div>
+        </article>
+
+        <article class="work" data-cat="financiero web">
+          <div class="work__art" aria-hidden="true">
+            <div class="art-shield">
+              <svg viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6z"/><circle cx="11.5" cy="11.5" r="2.6"/><path d="m13.5 13.5 2 2"/></svg>
+              <div class="art-tags"><span class="ok">Sin coincidencias</span><span class="warn">Revisar</span></div>
+            </div>
+          </div>
+          <div class="work__body">
+            <span class="work__client">Sujetos obligados</span>
+            <h3>Plataforma de prevención LAFT</h3>
+            <p>Plataforma multiempresa para la prevención del lavado de activos y del financiamiento del terrorismo.</p>
+            <ul class="work__list"><li>Clientes, operaciones y alertas</li><li>Búsqueda en listas restrictivas (screening)</li><li>Reportes de operaciones sospechosas y capacitaciones</li></ul>
+            <div class="work__tech"><span>Laravel</span><span>Multiempresa</span><span>API</span></div>
+          </div>
+        </article>
+
+        <article class="work" data-cat="gestion">
+          <div class="work__art" aria-hidden="true">
+            <div class="art-pos">
+              <div class="art-tables"><span class="busy"></span><span></span><span class="busy"></span><span class="busy"></span><span></span><span></span></div>
+              <div class="art-ticket"><i></i><i></i><i></i><b></b></div>
+            </div>
+          </div>
+          <div class="work__body">
+            <span class="work__client">Restaurantes</span>
+            <h3>Punto de venta para restaurantes</h3>
+            <p>Sistema para atender mesas, tomar pedidos y controlar la caja, el inventario y los costos del negocio.</p>
+            <ul class="work__list"><li>Mesas, pedidos y modificadores de platos</li><li>Pagos y turnos de caja</li><li>Inventario, recetas y contabilidad</li></ul>
+            <div class="work__tech"><span>Laravel</span><span>MySQL</span></div>
+          </div>
+        </article>
+
+        <article class="work" data-cat="financiero web">
+          <div class="work__art" aria-hidden="true">
+            <svg class="art-peru" viewBox="0 0 100 120"><path d="M30 6 L52 4 L62 18 L80 26 L76 44 L90 58 L84 78 L70 88 L72 104 L58 114 L48 100 L36 84 L22 64 L10 44 L14 24 Z" fill="#283442" stroke="#ff8a00" stroke-width="1.5"/><path d="M14 24 L48 30 L76 44 M22 64 L56 60 L84 78 M48 30 L56 60 L58 114" stroke="#ff8a00" stroke-width="1" fill="none" opacity=".55"/><path d="M48 30 L76 44 L56 60 Z" fill="#ff8a00" opacity=".55"/></svg>
+          </div>
+          <div class="work__body">
+            <span class="work__client">Análisis financiero</span>
+            <h3>Plataforma de estadística financiera</h3>
+            <p>Plataforma de indicadores con un mapa interactivo del Perú para consultar información por departamento y provincia.</p>
+            <ul class="work__list"><li>Mapa interactivo por regiones</li><li>Equipos de trabajo con invitaciones</li><li>Acceso seguro con doble factor</li></ul>
+            <div class="work__tech"><span>Laravel</span><span>Livewire</span><span>GeoJSON</span></div>
+          </div>
+        </article>
+
+        <article class="work" data-cat="web">
+          <div class="work__art" aria-hidden="true">
+            <div class="art-editor"><i style="--w:70%"></i><i style="--w:90%"></i><i style="--w:55%"></i><i style="--w:80%"></i><b></b></div>
+          </div>
+          <div class="work__body">
+            <span class="work__client">Productividad</span>
+            <h3>Prompt Designer</h3>
+            <p>Herramienta web para diseñar, organizar y reutilizar instrucciones (prompts) para asistentes de inteligencia artificial.</p>
+            <ul class="work__list"><li>Diseño guiado por sesiones</li><li>Biblioteca de prompts guardados</li><li>Cuentas de usuario</li></ul>
+            <div class="work__tech"><span>Laravel</span><span>MySQL</span></div>
+          </div>
+        </article>
+      </div>
+      <p class="works__empty" hidden>No hay proyectos en esta categoría.</p>
     </div>
   </section>
 
@@ -484,7 +638,7 @@
         </div>
         <div>
           <h4>Información</h4>
-          <ul><li><a href="#experiencia">Experiencia</a></li><li><a href="#confianza">Garantías</a></li><li><a href="#proceso">Cómo trabajo</a></li><li><a href="#faq">Preguntas frecuentes</a></li></ul>
+          <ul><li><a href="#portafolio">Portafolio</a></li><li><a href="#experiencia">Experiencia</a></li><li><a href="#confianza">Garantías</a></li><li><a href="#proceso">Cómo trabajo</a></li><li><a href="#faq">Preguntas frecuentes</a></li></ul>
         </div>
         <div>
           <h4>Contacto</h4>
@@ -502,6 +656,6 @@
     <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.2z"/></svg>
   </a>
 
-  <script src="script.js?v=5"></script>
+  <script src="script.js?v=6"></script>
 </body>
 </html>

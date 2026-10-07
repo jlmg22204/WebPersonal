@@ -46,6 +46,27 @@ if (TESTIMONIOS.length) {
   document.getElementById('recomendaciones').hidden = false;
 }
 
+// Filtros del portafolio
+const filters = document.querySelectorAll('.filter');
+const works = document.querySelectorAll('.work');
+const worksEmpty = document.querySelector('.works__empty');
+filters.forEach(btn =>
+  btn.addEventListener('click', () => {
+    const cat = btn.dataset.filter;
+    filters.forEach(b => {
+      b.classList.toggle('is-active', b === btn);
+      b.setAttribute('aria-pressed', b === btn);
+    });
+    let visibles = 0;
+    works.forEach(w => {
+      const show = cat === 'todos' || w.dataset.cat.split(' ').includes(cat);
+      w.hidden = !show;
+      if (show) visibles++;
+    });
+    worksEmpty.hidden = visibles > 0;
+  })
+);
+
 // Pestañas de soluciones
 const tabs = document.querySelectorAll('.sol__tab');
 const panels = document.querySelectorAll('.sol__panel');
