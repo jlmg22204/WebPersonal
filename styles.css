@@ -342,7 +342,9 @@ p { margin: 0 0 1rem; }
 .exp__item p { margin: 0; font-size: .9rem; color: var(--ink-500); }
 
 /* ---------- Garantías ---------- */
-.values { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.values { display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px; }
+.values .value { grid-column: span 2; }
+.values .value:nth-last-child(-n+2) { grid-column: span 3; }
 .value { display: grid; grid-template-columns: 48px 1fr; column-gap: 18px; padding: 28px; border-radius: var(--radius-lg); background: rgba(255, 255, 255, .03); border: 1px solid rgba(255, 255, 255, .08); transition: border-color .25s, background-color .25s; }
 .value:hover { border-color: rgba(255, 138, 0, .4); background: rgba(255, 255, 255, .05); }
 .value .icon { grid-row: span 2; }
@@ -461,7 +463,10 @@ p { margin: 0 0 1rem; }
   .hero__visual { max-width: 360px; }
   .badge--a { left: -40px; }
   .badge--b { right: -40px; }
-  .services, .values { grid-template-columns: repeat(2, 1fr); }
+  .services { grid-template-columns: repeat(2, 1fr); }
+  .values { grid-template-columns: repeat(2, 1fr); }
+  .values .value, .values .value:nth-last-child(-n+2) { grid-column: auto; }
+  .values .value:last-child { grid-column: span 2; }
   .sol { grid-template-columns: 1fr; }
   .sol__list { flex-direction: row; overflow-x: auto; padding-bottom: 4px; scrollbar-width: none; }
   .sol__list::-webkit-scrollbar { display: none; }
@@ -511,6 +516,7 @@ p { margin: 0 0 1rem; }
   .trust ul { gap: 8px 24px; }
   .trust li { font-size: .95rem; }
   .services, .values, .exp { grid-template-columns: 1fr; }
+  .values .value:last-child { grid-column: auto; }
   .service { padding: 30px 24px; }
   .sol__panel { padding: 22px; gap: 28px; }
   .about__panel { padding: 30px 22px; }
