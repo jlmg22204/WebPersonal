@@ -29,3 +29,9 @@ Las solicitudes del formulario se guardan en el proyecto de Supabase `marvicatta
 tabla `solicitudes_contacto` (ver `supabase/migrations/`). La clave usada en `script.js`
 es publicable: los visitantes solo pueden **insertar** solicitudes, nunca leerlas.
 Para revisarlas, entre al panel de Supabase → Table Editor → `solicitudes_contacto`.
+
+### Aviso por correo
+
+Cada solicitud nueva dispara la Edge Function `aviso-solicitud`
+(`supabase/functions/aviso-solicitud/`), que envía un correo mediante [Resend](https://resend.com).
+Requiere el secreto `RESEND_API_KEY` en Supabase → Edge Functions → Secrets.
