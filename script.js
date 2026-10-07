@@ -73,8 +73,8 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
 // Formulario de contacto: guarda la solicitud en Supabase
 // (la clave publicable es pública por diseño; la tabla solo permite insertar)
-const SUPABASE_URL = '';
-const SUPABASE_KEY = '';
+const SUPABASE_URL = 'https://atbjyuovneeulrdzpqln.supabase.co';
+const SUPABASE_KEY = 'sb_publishable_1gCvT3G8yBdB9nDuZCDa3g_ccEUux5C';
 const CONTACT_EMAIL = 'contacto@marvicatta9.net'; // TODO: correo real
 
 const form = document.getElementById('contactForm');
